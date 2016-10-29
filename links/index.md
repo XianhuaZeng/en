@@ -4,12 +4,8 @@ layout: page
 comments: yes
 ---
 
-## Statistics
-
-- [Xi'an's Og](http://xianblog.wordpress.com/): Bayesian, MCMC, R, ...
-- [Normal Deviate](http://normaldeviate.wordpress.com/): Thoughts on Statistics and Machine Learning
-- [Probability and statistics blog](http://www.statisticsblog.com/): Monte Carlo simulations in R and philosophical issues related to the practice of statistics
-
-## R Language
-
-- [The R Project](http://www.r-project.org/)
+- [The UNIX School](http://www.theunixschool.com/)
+- [Geek for Geeks](http://geeksforgeeks.org/)
+- [胡江堂](http://www.jiangtanghu.com/blog/)
+- [统计之都](http://cos.name/author/hujiangtang/)
+- [The DO Loop](http://blogs.sas.com/content/iml/)
