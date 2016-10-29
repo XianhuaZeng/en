@@ -4,7 +4,8 @@ title: Creating a SAS Format from a Data Set
 date: 2015-05-08 21:01
 author: Xianhua.Zeng
 comments: true
-categories: [CALL EXECUTE, Code, FILENAME, PROC FORMAT]
+tags: [CALL EXECUTE, FILENAME, PROC FORMAT]
+categories: [Code]
 ---
 SAS Formats are useful to the SAS programmer. They are usually used to map one value into another. We can create a format from a data set.  The most common way to create a format is use <a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000063536.htm" target="_blank"><span style="text-decoration: underline;">PROC FORMAT</span></a>.  The picture below is an example of a data set with two columns, analysis visit and analysis visit number. <!--more-->
 <a href="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full wp-image-136" src="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg" alt="Format" width="506" height="483" /></a> This post will illustrate four different methods to create a format called $visit from this data set.

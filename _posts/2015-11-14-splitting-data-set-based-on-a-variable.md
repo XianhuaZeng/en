@@ -4,7 +4,8 @@ title: Splitting Data Set Based on a Variable
 date: 2015-11-14 20:57
 author: Xianhua.Zeng
 comments: true
-categories: [CALL EXECUTE, Code, FILENAME, Hash Object]
+tags: [CALL EXECUTE, FILENAME, Hash Object]
+categories: [Code]
 ---
 SAS programmers sometimes need to split a data set into multiple data sets, depending on the unique values of a variable. And you can usually achieve what you want by applying a WHERE= option or IF statement. But these aren't the most efficient or elegant method. Suppose that you need to break SASHELP.CLASS into different tables based on the value of SEX, here are three methods I know:<!--more-->
 <ol>

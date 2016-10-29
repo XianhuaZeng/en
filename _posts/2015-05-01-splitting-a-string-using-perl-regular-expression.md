@@ -4,7 +4,8 @@ title: Splitting a String Using Perl Regular Expression
 date: 2015-05-01 20:59
 author: Xianhua.Zeng
 comments: true
-categories: [Code, PRXCHANGE, Regular Expression]
+tags: [PRXCHANGE, Regular Expression]
+categories: [Code]
 ---
 In SDTM domains, all character variables are limited to a maximum of 200 characters due to FDA requiring datasets in SAS v5 transport format. Text more than 200 characters long should be stored as a record in the SUPP--dataset. To improve readability the text should be split between words not just broken the text into 200-character. In this post, I'll introduce a method using <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span>.<!--more-->
 

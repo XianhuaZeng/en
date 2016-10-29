@@ -4,7 +4,8 @@ title: SAS Display Manager Commands
 date: 2015-11-08 23:38
 author: Xianhua.Zeng
 comments: true
-categories: [Code, DM, GSUBMIT]
+tags: [DM, GSUBMIT]
+categories: [Code]
 ---
 SAS programmers usually use time-consuming point-and-click methods to accomplish common tasks. For example, when the program completes its run, you need to open a specific dataset to check the desired variable or observation. <span style="font-size: 1rem;">Have you ever wished that these common tasks can be done automatically? <!--more-->Of course, these tasks had to be accomplished almost automagically. </span><span style="text-decoration: underline;"><a style="font-size: 1rem;" href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a000167815.htm" target="_blank">DM</a></span><span style="font-size: 1rem;"> commands came to your rescue. A DM command stands for Display Manager Statement. It submits SAS Program Editor, Log, Procedure Output or text editor commands as SAS statements. DM command is very powerful but didn’t get much attention of SAS programmers as they should be. In this post, I’ll introduce 2 DM commands you might not have heard of before.</span>
 <ol>

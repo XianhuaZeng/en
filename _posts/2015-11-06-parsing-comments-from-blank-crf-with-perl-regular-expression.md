@@ -4,7 +4,8 @@ title: Parsing Comments from Blank aCRF with Perl Regular Expression
 date: 2015-11-06 15:45
 author: Xianhua.Zeng
 comments: true
-categories: [Code, PRXCHANGE, Regular Expression]
+tags: [PRXCHANGE, Regular Expression]
+categories: [Code]
 ---
 As clinical SAS programmer, we sometimes need to import and parse annotations contained in a blank aCRF for creating or validating Define.xml. When parsing the imported comments from Blank aCRF, our ultimate goal is to identify the variable. Then we can get the correspondence information, such as CRF page. In this post, I'll introduce a method using Perl <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span>.
 <!--more-->
