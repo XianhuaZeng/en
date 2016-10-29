@@ -17,7 +17,7 @@ SAS Formats are useful to the SAS programmer. They are usually used to map one
     call execute(cats(AVISITN)||' = '||quote(cats(AVISIT)));
     if eof then call execute('; run;');
 run;
-</pre></code>
+</code></pre>
 </li>
  	<li>Macro variable
 <pre><code>proc sql noprint;
@@ -30,7 +30,7 @@ proc format;
     value visit
     &amp;fmtlst;
 run;
-</pre></code>
+</code></pre>
 </li>
  	<li><a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#n1e19y6lrektafn1kj6nbvhus59w.htm" target="_blank"><span style="text-decoration: underline;">CNTLIN=</span></a> option
 <pre><code>proc sql;
@@ -45,7 +45,7 @@ quit;
 
 proc format library=work cntlin=fmt;
 run;
-</pre></code>
+</code></pre>
 </li>
  	<li><a href="https://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank"><span style="text-decoration: underline;">FILENAME</span></a>
 <pre><code>proc sql;
@@ -70,6 +70,6 @@ proc format;
     %inc code / source2;
     ;
 run;
-</pre></code>
+</code></pre>
 </li>
 </ol>

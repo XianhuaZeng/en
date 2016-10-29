@@ -21,7 +21,7 @@ data _null_;
     set sex;
     call execute('data sex_'||cats(SEX)||'(where=(SEX='||quote(cats(SEX))||')); set sashelp.class; run;');
 run;
-</pre></code>
+</code></pre>
 </li>
  	<li><span style="text-decoration: underline;"><a href="https://support.sas.com/documentation/cdl/en/lrdict/64316/HTML/default/viewer.htm#a000211297.htm" target="_blank">FILENAME</a></span>:
 <pre><code>proc sql;
@@ -41,7 +41,7 @@ run;
 data %inc code;;
     set sashelp.class;
 run;
-</pre></code>
+</code></pre>
 </li>
  	<li><a href="http://support.sas.com/documentation/cdl/en/lrcon/65287/HTML/default/viewer.htm#n1b4cbtmb049xtn1vh9x4waiioz4.htm" target="_blank"><span style="text-decoration: underline;">HASH</span></a>(SAS9.2+):
 <pre><code>proc sort data=sashelp.class out=class;
@@ -59,7 +59,7 @@ data _null_;
     end;
     h.output(dataset:cats('sex_', SEX));
 run;
-</pre></code>
+</code></pre>
 </li>
 </ol>
 Note that the second method is most efficient when splits a huge data set since it reads data set only one time.

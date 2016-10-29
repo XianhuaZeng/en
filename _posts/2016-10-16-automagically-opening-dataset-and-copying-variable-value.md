@@ -20,7 +20,7 @@ data _null_;
 run;
 
 filename clip clear;";
-%mend markdsn;</pre></code></li><li>%vvalue, automagically copies variable value.<pre><code>%macro vvalue();
+%mend markdsn;</code></pre></li><li>%vvalue, automagically copies variable value.<pre><code>%macro vvalue();
 gsubmit '
 dm "wcopy";
 
@@ -53,5 +53,5 @@ data _null_;
 run;
 
 filename clip clear;';
-%mend vvalue;</pre></code></li></ol><p>Prerequisites:</p><ol><li>Store the macros in an autocall library</li><li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li><li>In command line type below commands to assign keys to evoke these macros<pre lang="sas" line="" file="" colla="+">keydef 'F9' '%makedsn'
+%mend vvalue;</code></pre></li></ol><p>Prerequisites:</p><ol><li>Store the macros in an autocall library</li><li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li><li>In command line type below commands to assign keys to evoke these macros<pre lang="sas" line="" file="" colla="+">keydef 'F9' '%makedsn'
 keydef 'F10' '%vvalue'</pre></li></ol><p>Usage:</p><ol><li>Select dataset name and then press F9</li><li>Select variable name and then press F10, repeat the above process until getting the desired value</li></ol>
