@@ -11,16 +11,16 @@ SAS Formats are useful to the SAS programmer. They are usually used to map one
 <a href="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full wp-image-136" src="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg" alt="Format" width="506" height="483" /></a> This post will illustrate four different methods to create a format called $visit from this data set.
 <ol>
  	<li><a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: underline;">CALL EXECUTE</span></a>
-<pre lang="SAS">data _null_;
+<pre><code>data _null_;
     set demo end=eof;
     if _n_=1 then call execute('proc format; value visit');
     call execute(cats(AVISITN)||' = '||quote(cats(AVISIT)));
     if eof then call execute('; run;');
 run;
-</pre>
+</pre></code>
 </li>
  	<li>Macro variable
-<pre lang="SAS">proc sql noprint;
+<pre><code>proc sql noprint;
     select catx(' = ', cats(AVISITN), quote(cats(AVISIT))) into :fmtlst separated by ' '
         from demo
         order by AVISITN;
@@ -30,10 +30,10 @@ proc format;
     value visit
     &amp;fmtlst;
 run;
-</pre>
+</pre></code>
 </li>
  	<li><a href="http://support.sas.com/documentation/cdl/en/proc/65145/HTML/default/viewer.htm#n1e19y6lrektafn1kj6nbvhus59w.htm" target="_blank"><span style="text-decoration: underline;">CNTLIN=</span></a> option
-<pre lang="SAS">proc sql;
+<pre><code>proc sql;
     create table fmt as
         select distinct 'visit' as FMTNAME
              , AVISITN as START
@@ -45,10 +45,10 @@ quit;
 
 proc format library=work cntlin=fmt;
 run;
-</pre>
+</pre></code>
 </li>
  	<li><a href="https://support.sas.com/documentation/cdl/en/lestmtsref/63323/HTML/default/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank"><span style="text-decoration: underline;">FILENAME</span></a>
-<pre lang="SAS">proc sql;
+<pre><code>proc sql;
     create table fmt as
         select distinct AVISITN
              , quote(cats(AVISIT)) as AVISIT
@@ -70,6 +70,6 @@ proc format;
     %inc code / source2;
     ;
 run;
-</pre>
+</pre></code>
 </li>
 </ol>
