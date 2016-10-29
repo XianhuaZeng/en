@@ -7,7 +7,7 @@ comments: true
 tags: [DM, GSUBMIT, PharmaSUG, PharmaSUG China 2016]
 categories: [Code]
 ---
-<p>I attended <span style="text-decoration: underline;"><a href="http://www.pharmasug.org/china/index.html" target="_blank">PharmaSUG China 2016</a></span> in Beijing last month, along with my line manager. There were a large number presentations this year. I was very inspired by Hui Liu's presentation (How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS)). He shared some useful tips on presentation, such as automagically opening dataset and copying variable value. The source code is not available, so I created two small macros to accomplish these two common tasks.<!--more--></p><ol><li>%markdsn, automagically opens the dataset selected.<pre class="highlight prettyprint">%macro markdsn();
+<p>I attended <span style="text-decoration: underline;"><a href="http://www.pharmasug.org/china/index.html" target="_blank">PharmaSUG China 2016</a></span> in Beijing last month, along with my line manager. There were a large number presentations this year. I was very inspired by Hui Liu's presentation (How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS)). He shared some useful tips on presentation, such as automagically opening dataset and copying variable value. The source code is not available, so I created two small macros to accomplish these two common tasks.<!--more--></p><ol><li>%markdsn, automagically opens the dataset selected.<pre><code>%macro markdsn();
 gsubmit "
 dm 'wcopy';
 
@@ -20,7 +20,7 @@ data _null_;
 run;
 
 filename clip clear;";
-%mend markdsn;</pre></li><li>%vvalue, automagically copies variable value.<pre class="highlight prettyprint">%macro vvalue();
+%mend markdsn;</code></pre></li><li>%vvalue, automagically copies variable value.<pre><code>%macro vvalue();
 gsubmit '
 dm "wcopy";
 
@@ -53,5 +53,5 @@ data _null_;
 run;
 
 filename clip clear;';
-%mend vvalue;<</pre></li></ol><p>Prerequisites:</p><ol><li>Store the macros in an autocall library</li><li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li><li>In command line type below commands to assign keys to evoke these macros<pre class="highlight prettyprint">keydef 'F9' '%makedsn'
-keydef 'F10' '%vvalue'</pre></li></ol><p>Usage:</p><ol><li>Select dataset name and then press F9</li><li>Select variable name and then press F10, repeat the above process until getting the desired value</li></ol>
+%mend vvalue;</code></pre></li></ol><p>Prerequisites:</p><ol><li>Store the macros in an autocall library</li><li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li><li>In command line type below commands to assign keys to evoke these macros<pre><code>keydef 'F9' '%makedsn'
+keydef 'F10' '%vvalue'</code></pre></li></ol><p>Usage:</p><ol><li>Select dataset name and then press F9</li><li>Select variable name and then press F10, repeat the above process until getting the desired value</li></ol>
