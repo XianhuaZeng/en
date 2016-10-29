@@ -42,4 +42,4 @@ If you don't want to type commands, here is a hotkey-driven solution. Save the 
 </code></pre>
 Open one dataset then type below command in command line to assign a VT key to run the code.
 <pre><code>keydef "F9" "gsubmit '%inc ""/user1/zenga/tool.sas"";'"</code></pre>
-When you enter the assigned key you will be asked to enter line number or variable name, then you can get desired observation or variable. <a href="http://www.xianhuazeng.com/en/wp-content/uploads/2015/11/Window.jpg"><img class="aligncenter size-full wp-image-589" src="http://www.xianhuazeng.com/en/wp-content/uploads/2015/11/Window.jpg" alt="Window" width="888" height="279" /></a>
+When you enter the assigned key you will be asked to enter line number or variable name, then you can get desired observation or variable. <a href="http://www.xianhuazeng.com/en/wp-content/uploads/2015/11/Window.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/en/wp-content/uploads/2015/11/Window.jpg" alt="Window" /></a>
