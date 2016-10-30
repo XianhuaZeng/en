@@ -7,7 +7,7 @@ comments: true
 tags: [CALL EXECUTE, FILENAME, Hash Object]
 categories: [Code]
 ---
-SAS programmers sometimes need to split a data set into multiple data sets, depending on the unique values of a variable. And you can usually achieve what you want by applying a WHERE= option or IF statement. But these aren't the most efficient or elegant method. Suppose that you need to break SASHELP.CLASS into different tables based on the value of SEX, here are three methods I know:<!--more-->
+SAS programmers sometimes need to split a data set into multiple data sets, depending on the unique values of a variable. And you can usually achieve what you want by applying a WHERE= option or IF statement. But these aren't the most efficient or elegant method. Suppose that you need to break SASHELP.CLASS into different tables based on the value of SEX, here are three methods I know:
 <ol>
  	<li><span style="text-decoration: underline;"><a href="http://support.sas.com/documentation/cdl/en/mcrolref/61885/HTML/default/viewer.htm#a000543697.htm" target="_blank">CALL EXECUTE</a></span>:
 <pre><code>proc sql;

@@ -7,7 +7,7 @@ comments: true
 tags: [CALL EXECUTE, FILENAME, PROC FORMAT]
 categories: [Code]
 ---
-SAS Formats are useful to the SAS programmer. They are usually used to map one value into another. We can create a format from a data set.  The most common way to create a format is use <a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000063536.htm" target="_blank"><span style="text-decoration: underline;">PROC FORMAT</span></a>.  The picture below is an example of a data set with two columns, analysis visit and analysis visit number. <!--more-->
+SAS Formats are useful to the SAS programmer. They are usually used to map one value into another. We can create a format from a data set.  The most common way to create a format is use <a href="http://support.sas.com/documentation/cdl/en/proc/61895/HTML/default/viewer.htm#a000063536.htm" target="_blank"><span style="text-decoration: underline;">PROC FORMAT</span></a>.  The picture below is an example of a data set with two columns, analysis visit and analysis visit number.
 <a href="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg"><img class="aligncenter size-full " src="http://www.xianhuazeng.com/en/wp-content/uploads/2015/05/Format.jpg" alt="Format" /></a> This post will illustrate four different methods to create a format called $visit from this data set.
 <ol>
  	<li><a href="http://support.sas.com/documentation/cdl/en/mcrolref/67912/HTML/default/viewer.htm#n1q1527d51eivsn1ob5hnz0yd1hx.htm" target="_blank"><span style="text-decoration: underline;">CALL EXECUTE</span></a>

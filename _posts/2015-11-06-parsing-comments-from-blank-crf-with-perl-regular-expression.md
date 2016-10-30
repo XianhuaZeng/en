@@ -8,7 +8,6 @@ tags: [PRXCHANGE, Regular Expression]
 categories: [Code]
 ---
 As clinical SAS programmer, we sometimes need to import and parse annotations contained in a blank aCRF for creating or validating Define.xml. When parsing the imported comments from Blank aCRF, our ultimate goal is to identify the variable. Then we can get the correspondence information, such as CRF page. In this post, I'll introduce a method using Perl <span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span>.
-<!--more-->
 Syntax: <a href="http://support.sas.com/documentation/cdl/en/lefunctionsref/63354/HTML/default/n0r8h2fa8djqf1n1cnenrvm573br.htm" target="_blank"><span style="text-decoration: underline;">PRXCHANGE</span> </a>(regular-expression-id|perl-regular-expression, times, source). Example:
 <pre><code>COMMENTS=prxchange("s/.*?(\b(?:LBCAT|LBTEST|LBTESTCD)\b)?/\1 /o", -1, cats(COMMENTS));</code></pre>
 Regular expression visualization by <a href="http://www.regexper.com/" target="_blank"><span style="text-decoration: underline;">Regexper</span></a>:
