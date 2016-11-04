@@ -16,4 +16,3 @@ layout: page
   </li>
 {% endfor %}
 </ul>
-
