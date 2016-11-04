@@ -7,16 +7,7 @@ comments: true
 tags: [DM, GSUBMIT, PharmaSUG, PharmaSUG China 2016]
 categories: [Code]
 ---
-<p>I attended <span style="text-decoration: none;"><a href="http://www.pharmasug.org/china/index.html" target="_blank">PharmaSUG China 2016</a></span> in Beijing last month, along with my line manager. There were a large number presentations this year. I was very inspired by Hui Liu's presentation (How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS)). He shared some useful tips on presentation, such as automagically opening dataset and copying variable value. The source code is not available, so I created two small macros to accomplish these two common tasks.</p><ol><li>%markdsn, automagically opens the dataset selected.{% highlight r %}
-tidy.source = function(file = choose.files()) {
-   exprs = parse(file)
-   for (i in 1:length(exprs)) {
-       dep = paste(deparse(exprs[i]), collapse = "\n")
-       dep = substring(dep, 12, nchar(dep) - 1)
-       cat(dep, "\n")
-   }
-}
-%macro markdsn();
+<p>I attended <span style="text-decoration: none;"><a href="http://www.pharmasug.org/china/index.html" target="_blank">PharmaSUG China 2016</a></span> in Beijing last month, along with my line manager. There were a large number presentations this year. I was very inspired by Hui Liu's presentation (How to give SAS ambiguous instructions and still being a big winner (literally delegate everything to SAS)). He shared some useful tips on presentation, such as automagically opening dataset and copying variable value. The source code is not available, so I created two small macros to accomplish these two common tasks.</p><ol><li>%markdsn, automagically opens the dataset selected.{% highlight sas %}%macro markdsn();
 gsubmit "
 dm 'wcopy';
 
