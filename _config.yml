@@ -1,3 +1,4 @@
-permalink: /:year/:month/:title/
+permalink: /:year/:month/:day/:title/
 url: http://www.xianhuazeng.com/en
 author: Xianhua Zeng
+highlighter: rouge
