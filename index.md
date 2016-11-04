@@ -1,5 +1,5 @@
 ---
-title: Clinical SAS Programming<br />If you don't build your dream someone will hire you to help build theirs
+title: Clinical SAS Programming
 layout: page
 ---
 
