@@ -20,7 +20,23 @@ data _null_;
 run;
 
 filename clip clear;";
-%mend markdsn;{% endhighlight %}</li><li>%vvalue, automagically copies variable value.<pre><code>%macro vvalue();
+%mend markdsn;{% endhighlight %}</li>
+  <li>%markcode, run the selected code and open the last created dataset
+{% highlight sas %}%macro markcode();
+gsubmit "
+dm 'wcopy';
+filename clip clipbrd;
+data _null_;
+   infile clip end=eof;
+   input;
+   call execute(_INFILE_);
+   if eof then call execute('%nrstr(dm ''vt &syslast;'' continue ;)');
+run;
+filename clip clear;";
+%mend markcode;
+{% endhighlight %}
+</li>
+<li>%vvalue, automagically copies variable value.<pre><code>%macro vvalue();
 gsubmit '
 dm "wcopy";
 
@@ -53,5 +69,21 @@ data _null_;
 run;
 
 filename clip clear;';
-%mend vvalue;</code></pre></li></ol><p>Prerequisites:</p><ol><li>Store the macros in an autocall library</li><li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li><li>In command line type below commands to assign keys to evoke these macros<pre><code>keydef 'F9' '%makedsn'
-keydef 'F10' '%vvalue'</code></pre></li></ol><p>Usage:</p><ol><li>Select dataset name and then press F9</li><li>Select variable name and then press F10, repeat the above process until getting the desired value</li></ol>
+%mend vvalue;</code></pre>
+</li>
+</ol>
+<p>Prerequisites:</p>
+<ol>
+  <li>Store the macros in an autocall library</li>
+  <li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li>
+  <li>In command line type below commands to assign keys to evoke these macros
+    <pre><code>keydef 'F9' '%markdsn'
+keydef 'F10' '%markcode' 
+keydef 'F11' '%vvalue'</code></pre>
+</li>
+</ol>
+<p>Usage:</p>
+<ol>
+  <li>Select dataset name and then press F9</li>
+  <li>Mark some code and then press F10</li> 
+  <li>Select variable name and then press F11, repeat the above process until getting the desired value</li></ol>
