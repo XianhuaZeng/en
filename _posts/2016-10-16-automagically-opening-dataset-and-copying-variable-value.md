@@ -14,9 +14,9 @@ dm 'wcopy';
 filename clip clipbrd;
 
 data _null_;
-   infile clip;
-   input;
-   call execute('dm ""vt '||_INFILE_||';"" continue ;');
+    infile clip;
+    input;
+    call execute('dm ""vt '||_INFILE_||';"" continue ;');
 run;
 
 filename clip clear;";
@@ -27,10 +27,10 @@ gsubmit "
 dm 'wcopy';
 filename clip clipbrd;
 data _null_;
-   infile clip end=eof;
-   input;
-   call execute(_INFILE_);
-   if eof then call execute('%nrstr(dm ''vt &syslast;'' continue ;)');
+    infile clip end=eof;
+    input;
+    call execute(_INFILE_);
+    if eof then call execute('%nrstr(dm ''vt &syslast;'' continue ;)');
 run;
 filename clip clear;";
 %mend markcode;
@@ -43,9 +43,9 @@ dm "wcopy";
 filename clip clipbrd;
 
 data _null_;
-   infile clip;
-   input;
-   call symputx("var", _INFILE_);
+    infile clip;
+    input;
+    call symputx("var", _INFILE_);
 run;
 
 filename clip clear;
@@ -63,8 +63,8 @@ filename clip clipbrd;
 data _null_;
     file clip;
     length value $32767;
-	if &amp;increment &lt;= countw("&amp;varlst", "@") then value=scan("&amp;varlst", &amp;increment, "@");
-	else value=scan("&amp;varlst", countw("&amp;varlst", "@"), "@");
+	  if &amp;increment &lt;= countw("&amp;varlst", "@") then value=scan("&amp;varlst", &amp;increment, "@");
+	  else value=scan("&amp;varlst", countw("&amp;varlst", "@"), "@");
     put value;
 run;
 
