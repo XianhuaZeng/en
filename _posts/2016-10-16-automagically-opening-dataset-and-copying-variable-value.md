@@ -21,7 +21,7 @@ run;
 
 filename clip clear;";
 %mend markdsn;{% endhighlight %}</li>
-  <li>%markcode, run the selected code and open the last created dataset
+  <li>%markcode, runs the selected code and automagically opens the last created dataset
 {% highlight sas %}%macro markcode();
 gsubmit "
 dm 'wcopy';
