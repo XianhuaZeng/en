@@ -59,10 +59,7 @@ proc sql noprint;
     ;
 quit;
 
-data _null_;
-    if ^symexist("increment") then call symputx("increment", 1, "g");
-    else call symputx("increment", 1 + input(symget("increment"), best.), "g"); 
-run;
+%let increment=%eval(&amp;increment+1);
 
 filename clip clipbrd;
 
@@ -81,6 +78,7 @@ filename clip clear;';
 <p>Prerequisites:</p>
 <ol>
   <li>Store the macros in an autocall library</li>
+  <li>Define a global macro variable named INCREMENT with initial value 0 in setup program</li>
   <li>In command line type below commands to assign keys to evoke these macros
     <pre><code>keydef 'F9' '%markdsn'
 keydef 'F10' '%markcode' 
