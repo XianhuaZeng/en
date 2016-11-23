@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://www.xianhuazeng.com/en/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/04/19/clinical-sas-programming/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/05/01/splitting-a-string-using-perl-regular-expression/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/08/sas-display-manager-commands/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/05/08/creating-a-sas-format-from-a-data-set/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/06/parsing-comments-from-blank-crf-with-perl-regular-expression/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/feed/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/links/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2015/11/14/splitting-data-set-based-on-a-variable/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/2016/10/16/automagically-opening-dataset-and-copying-variable-value/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/about/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/guestbook/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/categories/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://www.xianhuazeng.com/en/tags/</loc>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>
+<!--<guid value="5fb11f90-92c9-40b7-94d2-4e20bc305fee" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
