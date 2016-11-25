@@ -34,6 +34,14 @@ layout: default
 </span>
 {% endif %}
 </section>
+<div class="post-recent">
+  {% if page.previous %}
+    <p>Previous <a href="{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a></p>
+  {% endif %}
+  {% if page.next %}
+    <p>Next <a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a></p>
+  {% endif %}
+</div>
 {% include comments.md %}
 <script type="text/javascript">
 $(function(){
