@@ -46,4 +46,4 @@ run;
 </code></pre>
 Regular expression visualization by <a href="http://www.regexper.com/" target="_blank"><span style="text-decoration: none;">Regexper</span></a>:
 <p><a href="http://www.xianhuazeng.com/en/wp-content/uploads/2016/11/Visualization02.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/en/wp-content/uploads/2016/11/Visualization02.jpg" alt="Visualization" /></a></p>
-"\b" matches match exactly a word boundary. 
+"\b" matches a word boundary. "\w+" matches any word character (equal to [a-zA-Z0-9_]) as many times as possible. 
