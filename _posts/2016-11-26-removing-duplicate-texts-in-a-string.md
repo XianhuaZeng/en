@@ -10,14 +10,15 @@ categories: [Code]
 A recent question on SAS-L asked how to remove duplicate texts in a string. Several solutions were offered, each of them solving the problem differently. From my point of view, using traditional functions like SCAN and SUBSTR might be confusing and labourious. Here is <span style="text-decoration: none;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span> solution.
 <pre><code>data _null_;
     infile cards truncover;
-    input Column1 $32767.;
+    input STRING $32767.;
     REX1=prxparse('s/([a-z].+?\.\s+)(.*?)(\1+)/\2\3/i');
     REX2=prxparse('/([a-z].+?\.\s+)(.*?)(\1+)/i');
     do i=1 to 100;
-        Column1_=prxchange(REX1, -1, compbl(Column1));
-        Column1=Column1_;
+        STRING_=prxchange(REX1, -1, compbl(STRING));
+        STRING=STRING_;
+        if not prxmatch(REX2, compbl(STRING)) then leave;
     end;
-    put Column1=;
+    put STRING=;
 cards;
 a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog. a. The cow jumps over the moon. 
 b. The chicken crossed the road. a. The cow jumps over the moon. b. The chicken crossed the road. c. The quick brown fox jumped over the lazy dog.
