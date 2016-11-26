@@ -7,7 +7,7 @@ comments: true
 tags: [Regular Expression, PRXCHANGE]
 categories: [Code]
 ---
-A recent question on SAS-L asked how to remove duplicate text in a string. Several solutions were offerd, each of them solving the problem differently. From my point of view, using traditional functions like SCAN and SUBSTR might be confusing and labourious. Here is <span style="text-decoration: none;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span> solution.
+A recent question on SAS-L asked how to remove duplicate texts in a string. Several solutions were offered, each of them solving the problem differently. From my point of view, using traditional functions like SCAN and SUBSTR might be confusing and labourious. Here is <span style="text-decoration: none;"><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">regular expression</a></span> solution.
 <pre><code>data _null_;
     infile cards truncover;
     input Column1 $32767.;
