@@ -30,7 +30,7 @@ run;
 </code></pre>
 Regular expression visualization by <a href="http://www.regexper.com/" target="_blank"><span style="text-decoration: none;">Regexper</span></a>:
 <p><a href="http://www.xianhuazeng.com/en/wp-content/uploads/2016/11/Visualization01.jpg"><img class="aligncenter size-full" src="http://www.xianhuazeng.com/en/wp-content/uploads/2016/11/Visualization01.jpg" alt="Visualization" /></a></p>
-Here’s a brief explanation of the regular expression. "[a-z]" matched a single lower case letter. ".+?" matches any characters as few times as possible. "\." matches exactly a period character. "\s+" exactly a space as many times as possible. ".*?" matches any characters as few times as possible. "\1+" matches the first capturing group as many times as possible. 
+Here's a brief explanation of the regular expression. '[a-z]' matched a single lower case letter. '.+?' matches any characters as few times as possible. '\.' matches exactly a period character. '\s+' exactly a space as many times as possible. '.*?' matches any characters as few times as possible. '\1+' matches the first capturing group as many times as possible. 
 
 Note that if the repeated time value is greater than 100, you need to increase the stopping value in DO loop accordingly. I think this scenario rarely happens. If you want to remove duplicate words instead of sentences, you need to adjust the expression. For example:
 <pre><code>data _null_;
