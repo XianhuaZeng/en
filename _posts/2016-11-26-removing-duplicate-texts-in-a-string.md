@@ -14,8 +14,7 @@ A recent question on SAS-L asked how to remove duplicate texts in a string. Seve
     REX1=prxparse('s/([a-z].+?\.\s+)(.*?)(\1+)/\2\3/i');
     REX2=prxparse('/([a-z].+?\.\s+)(.*?)(\1+)/i');
     do i=1 to 100;
-        STRING_=prxchange(REX1, -1, compbl(STRING));
-        STRING=STRING_;
+        STRING=prxchange(REX1, -1, compbl(STRING));
         if not prxmatch(REX2, compbl(STRING)) then leave;
     end;
     put STRING=;
@@ -38,8 +37,7 @@ Note that if the repeated time value is greater than 100, you need to increase t
     REX1=prxparse('s/(\b\w+\b)(.*?)(\b\1+\b)/\2\3/i');
     REX2=prxparse('/(\b\w+\b)(.*?)(\b\1+\b)/i');
     do i=1 to 100;
-        STRING_=prxchange(REX1, -1, compbl(STRING));
-        STRING=STRING_;
+        STRING=prxchange(REX1, -1, compbl(STRING));
         if not prxmatch(REX2, compbl(STRING)) then leave;
     end;
     put STRING=;
